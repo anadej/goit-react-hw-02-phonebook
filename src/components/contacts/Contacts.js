@@ -7,7 +7,7 @@ const Contacts = ({ contacts, filter, removeContact }) => {
       <ul>
         {contacts.map(
           (contact) =>
-            contact.name.includes(filter) && (
+            contact.name.toLowerCase().includes(filter.toLowerCase()) && (
               <ContactList
                 {...contact}
                 key={contact.id}
